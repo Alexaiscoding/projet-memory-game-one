@@ -1,113 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dragon Ball Z Game</title>
-<link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-</head>
+  <body>
+    <div class="div1">
+      <header><h1>Dragon Ball Z Memory Game</h1></header>
 
-<body>
-   
+      <section class="section1">
+        <!-- Timer -->
 
+        <span class="timer"> 0:00</span>
+        <!-- Stars notation -->
+        <ul>
+          <li class="display-star"></li>
+          <li class="display-star"></li>
+          <li class="display-star"></li>
+          <li class="display-star"></li>
+          <li class="display-star"></li>
+        </ul>
+        <!-- Display moves and Name -->
 
-<div class="div1">  
-
-<header> <h1>   Dragon Ball Z Memory Game    </h1> </header>
-
-<section class="section1">   
-<!-- Timer -->
-
-<span class="timer"> 0:00</span>   
-<!-- Stars notation -->
-<ul>    
-<li class="display-star"></li>
-<li class="display-star"></li>
-<li class="display-star"></li>
-<li class="display-star"></li>
-<li class="display-star"></li>
-</ul>
-<!-- Display moves and Name -->
-
-<span class="display-moves">0 Moves</span>
-<span class="result">   </span>
-<span class="name"> Name:</span>
-</section>
-</div>
-
-<!-- Grid Section -->
-
-<section class="memory-game">
-
-    <div class="memory-card">
-        <img class="back-face" src="./img/image3.png" alt="front-image"/>
-        <img class="front-face" src="./img/image-frontface.png" alt="image1"/>
+        <p>
+          <span class="display-moves"
+            ><span class="count">0</span> Moves:
+          </span>
+        </p>
+        <p><span>Score: </span><span class="result">0</span></p>
+        <p><span class="name"> Name:</span></p>
+      </section>
     </div>
 
+    <!-- Grid Section -->
 
-    <div class="memory-card">
-       
-        <img class="back-face" src="./img/image12.png" alt="front-image"/>
-        <img class="front-face" src="./img/image-frontface.png" alt="image1"/>
-    </div>
-
-    <div class="memory-card">
-        <img class="front-face" src="./img/image-frontface.png" alt="image1"/>
-        <img class="back-face" src="./img/image1.png" alt="front-image"/>
-    </div>
-
-    <div class="memory-card">
-        <img class="front-face" src="./img/image-frontface.png"  alt="image1"/>
-        <img class="back-face" src="./img/image10.png" alt="front-image"/>
-    </div>
-   
-
-    <div class="memory-card">
-        <img class="front-face" src="./img/image-frontface.png" alt="image1"/>
-        <img class="back-face" src="./img/image7.png" alt="front-image"/>
-    </div>
-
-    <div class="memory-card">
-        <img class="front-face" src="./img/image-frontface.png" alt="image1"/>
-        <img class="back-face" src="./img/image7.png" alt="front-image"/>
-    </div>
-
-    <div class="memory-card">
-        <img class="front-face" src="./img/image-frontface.png" alt="image1"/>
-        <img class="back-face"src="./img/image1.png" alt="front-image"/>
-    </div>
-    
-    <div class="memory-card">
-        <img class="front-face" src="./img/image-frontface.png" alt="image1"/>
-        <img class="back-face" src="./img/image12.png" alt="front-image"/>
-    </div>
-
-
-    <div class="memory-card">
-        <img class="front-face" src="./img/image-frontface.png"  alt="image1"/>
-        <img class="back-face" src="./img/image10.png" alt="front-image"/>
-    </div>
-
-    <div class="memory-card">
-        <img class="front-face" src="./img/image-frontface.png" alt="image1"/>
-        <img class="back-face" src="./img/image3.png" alt="front-image"/>
-    </div>
-
-    <div class="memory-card">
-        <img class="front-face" src="./img/image-frontface.png" alt="image1"/>
-        <img class="back-face" src="./img/image7.png" alt="front-image"/>
-    </div>
-
-    <div class="memory-card">
-        <img class="front-face" src="./img/image-frontface.png"  alt="image1"/>
-        <img class="back-face" src="./img/image10.png" alt="front-image"/>
-    </div>
-
-
-
-</section>
-<script type="module" src="indexdom.js"> </script>   
-</body>
+    <section id="board" class="memory-game"></section>
+    <script type="module" src="indexdom.js"></script>
+  </body>
 </html>
