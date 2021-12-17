@@ -54,29 +54,32 @@
 
 /* positionner l'image en dessous de la carte avec absolute*/ 
  
-  .front-face{
+  .memory-card .front-face{
     width: 100%;
     height: 100%;
     text-align: center;
-    content:none;
+    /*content:none;*/
   /* to see the image */
     transform: rotateY(180deg);
-    backface-visibility: hidden;
-    position: absolute;
-  }
-  img{
-
-    width: 100%;
-    height: 100%;
-    
+    backface-visibility:hidden;
+    position:absolute;
   }
 
+  .front-face:hover {
+    background: repeating-radial-gradient(#f69d3c, #07610f 50px);
+    border-radius: 20px;
+    animation: rotation 5s infinite linear;
+    width:120%;
+    height:120%;
+  }
 
-  .back-face{
+  .memory-card .back-face{
     width:100%;
     height:100%;
     padding: 100px;
-    backface-visibility: visible;
+    
+    /*backface-visibility: visible;*/
+    animation: rotation 2s infinite linear;
   }
 
 
@@ -102,7 +105,11 @@
     font-weight: 400;
     font-family: "Ribeye Marrow", sans-serif;
   }
-
+  img{
+    width: 100%;
+    height: 100%;
+    
+  }
   /*   STARS CSS */ 
 
   /*IMAGES */

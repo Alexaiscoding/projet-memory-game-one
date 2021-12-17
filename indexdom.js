@@ -1,74 +1,57 @@
-//class MemoryGame{
+
+const cards = document.querySelectorAll(".memory-card");
+
+//Flip card
+
+function flipCard() {
+ 
+  if (this.classList.contains('locked')) return
+  //console.log("> who is this>", this)
 
 
-//3-Flip card 
-const cards = document.querySelectorAll('.memory-card');
+  // flip de front-face à back-face
+  this.classList.toggle("flip");
+  const flip1 = document.querySelectorAll(".memory-card.flip:not(.locked)");
+  console.log(flip1);
+  if (flip1.length === 2) {
+     if(matchChecked(flip1[0],flip1[1])) {
+       flip1[0].classList.add('locked')
+       flip1[1].classList.add('locked')
 
+     }
+  } 
+} 
+cards.forEach((card) => card.addEventListener("click", flipCard));
 
-    function flipCard() {
-      this.classList.toggle('flip');
+function matchChecked(card1, card2) {
+  console.log(card1, card2)
+  const firstOpenCard = card1.querySelector('.back-face')
+  const secondOpenCard = card2.querySelector('.back-face')
+  console.log(firstOpenCard.src, secondOpenCard.src)
 
+  if(firstOpenCard.src === secondOpenCard.src) {
+    return true
+  } else {
+    setTimeout(() => {
+      firstOpenCard.closest('.memory-card').classList.remove('flip')
+      secondOpenCard.closest('.memory-card').classList.remove('flip')
+    },1500)
+  }
+}
+ //location.reload();
 
+//Verify is the game is Finish
 
-    }
-
-    cards.forEach(card => card.addEventListener('click', flipCard));
-
-
-// - Match Cards
-
-//for ...
-
-//function checkForMatch()
-//{
- //   let matchCard = firstCard.dataset.framework === secondCard.dataset.framework;
-
-
-//}
-
-//desactivate the card + unflipcard function a definir
-
-//When select two cards verify if the same, if match declare win/true
-//
-
-function matchChecked (card1,card2) {
-let firstOpencard = card1 => { documentElementSelector ('div.back-face',.src)} // +le stocker
-let secondOpenCard= card2 = 
-this.clickedCards=0;
-   this.clickedCards ++
-     if (card1 === card2){
-       return true;}
-    else{
-         return false;}
-   }
-    
-
-
-
-
-//Verify is the game is Finished() {
-    
- //   finishedCheck(){
- //   if ( this.guessCards === this.cards.length/2){
- //         return true; }
- //     else {
- //         return false; }
- //   }
-    
+/*finishedCheck(){
+if ( this.guessCards === this.cards.length/2){
+      return true; } 
+         else {
+    return false; }
+} */
 
 //function restart
 
 
-
-
-// constructor (cards) {
-
- //   this.cards=cards;
- //   this.openCards = [];
-  //  this.clickedCards=0;
-    //this.GuessCards=0;
-    //
 //shuffleCards?
 // A FAIRE J+3
-//*function reset 
-
+//*function reset
